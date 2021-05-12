@@ -26,7 +26,8 @@ Gereksinimler:
 **Sisteminize bazı paketler kurulup o paketlere birkaç ayar yapılacaktır! Sisteminizde ne gibi değişikliklerin olacağını öğrenmek için aşağıdaki ilgili başlığı okuyunuz.**
 
 ```bash
-git clone git@github.com:Kizlar-Grubu-Proje-Yapiyor/Veritabani-Yonetim-Sistemleri-Projesi.git
+sudo apt install -y git
+git clone https://github.com/Kizlar-Grubu-Proje-Yapiyor/Veritabani-Yonetim-Sistemleri-Projesi.git
 cd Veritabani-Yonetim-Sistemleri-Projesi/
 ./yukle.sh
 ```
@@ -34,10 +35,6 @@ cd Veritabani-Yonetim-Sistemleri-Projesi/
 ## Kurulum esnasında yapılacak değişiklikler
 
 Hayırlısı be gülüm
-
-## Yararlanılan bazı linkler
-
-* https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-20-04
 
 ## Lisans
 [MIT License](LICENSE)
