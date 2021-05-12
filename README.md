@@ -29,7 +29,7 @@ Gereksinimler:
 sudo apt install -y git
 git clone https://github.com/Kizlar-Grubu-Proje-Yapiyor/Veritabani-Yonetim-Sistemleri-Projesi.git
 cd Veritabani-Yonetim-Sistemleri-Projesi/
-./yukle.sh
+sudo ./yukle.sh
 ```
 
 ## Kurulum esnasında yapılacak değişiklikler
