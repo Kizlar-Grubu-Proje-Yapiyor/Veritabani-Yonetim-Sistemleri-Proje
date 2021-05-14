@@ -17,24 +17,38 @@ then
 	exit
 fi
 
-echo -e "\n${BOLD_BLUE}Sisteminiz guncelleniyor${NC}\n"
-apt update
-apt upgrade -y
+echo -e "${BOLD_BLUE}Kurulum seklini seciniz:${NC}"
+echo -e "${BOLD_BLUE}1. Tam Kurulum${NC}"
+echo -e "${BOLD_BLUE}2. Kismi Kurulum${NC}"
+printf "${BOLD_BLUE}Seciminiz [1/2] (Varsayilan: kismi kurulum):${NC} "
 
-echo -e "\n${BOLD_BLUE}${NC}\n"
-apt install -y firewalld apache2 mysql-server mysql-client php phpmyadmin libapache2-mod-php php-mysql
+read ans
 
-echo -e "\n${BOLD_BLUE}Apache web sunucusu etkinlestiriliyor${NC}\n"
-ufw app list
-ufw allow in "Apache"
-ufw enable
-ufw status
+if [[ $ans == "1" || $ans == "T" || $ans == "t" ]]
+then
+	echo -e "${BOLD_BLUE}Tam kurulum secildi${NC}"
 
-echo -e "\n${BOLD_BLUE}mySQL kurulumu yapiliyor${NC}"
-echo -e "${BOLD_RED}Sizden root kullanicisi icin sifre sorabilir! Sectiginiz sifrenin bir onemi yoktur.${NC}"
-mysql_secure_installation --use-default
+	echo -e "${BOLD_BLUE}Sisteminiz guncelleniyor${NC}"
+	apt update
+	apt upgrade -y
 
-echo -e "\n${BOLD_BLUE}Database ayarlaniyor${NC}\n"
+	echo -e "${BOLD_BLUE}Gerekli paketler yukleniyor${NC}"
+	apt install -y firewalld apache2 mysql-server mysql-client php phpmyadmin libapache2-mod-php php-mysql
+
+	echo -e "${BOLD_BLUE}Apache web sunucusu etkinlestiriliyor${NC}"
+	ufw app list
+	ufw allow in "Apache"
+	ufw enable
+	ufw status
+
+	echo -e "${BOLD_BLUE}mySQL kurulumu yapiliyor${NC}"
+	echo -e "${BOLD_RED}Sizden root kullanicisi icin sifre sorabilir! Sectiginiz sifrenin bir onemi yoktur.${NC}"
+	mysql_secure_installation --use-default
+else
+	echo -e "${BOLD_BLUE}Kismi kurulum secildi${NC}"
+fi
+
+echo -e "${BOLD_BLUE}Database ayarlaniyor${NC}"
 mysql < database.sql
 
-echo -e "\n${BOLD_GREEN}Kurulum tamamlandi!${NC}\n"
+echo -e "${BOLD_GREEN}Kurulum tamamlandi!${NC}"
