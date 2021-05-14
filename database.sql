@@ -3,13 +3,13 @@ CREATE DATABASE IF NOT EXISTS kutuphanedb;
 
 CREATE TABLE IF NOT EXISTS kutuphanedb.adresler (
 	adres_no INT NOT NULL AUTO_INCREMENT,
-	adres VARCHAR(45) NOT NULL,
+	adres VARCHAR(100),
 	PRIMARY KEY (adres_no)
 );
 
 CREATE TABLE IF NOT EXISTS kutuphanedb.kutuphane (
 	kutuphane_no INT NOT NULL AUTO_INCREMENT,
-	kutuphane_adi VARCHAR(45),
+	kutuphane_adi VARCHAR(50),
 	adres_no INT,
 	PRIMARY KEY (kutuphane_no),
 	FOREIGN KEY (adres_no) REFERENCES kutuphanedb.adresler(adres_no)
@@ -17,10 +17,10 @@ CREATE TABLE IF NOT EXISTS kutuphanedb.kutuphane (
 
 CREATE TABLE IF NOT EXISTS kutuphanedb.uyeler (
 	uye_no INT NOT NULL AUTO_INCREMENT,
-	uye_adi VARCHAR(45),
-	uye_soyadi VARCHAR(45),
+	uye_adi VARCHAR(20),
+	uye_soyadi VARCHAR(20),
 	uye_tel_no INT,
-	uye_eposta VARCHAR(45),
+	uye_eposta VARCHAR(30),
 	adres_no INT,
 	PRIMARY KEY (uye_no),
 	FOREIGN KEY (adres_no) REFERENCES kutuphanedb.adresler(adres_no)
@@ -28,22 +28,22 @@ CREATE TABLE IF NOT EXISTS kutuphanedb.uyeler (
 
 CREATE TABLE IF NOT EXISTS kutuphanedb.kitaplar (
 	isbn_no INT,
-	kitap_adi VARCHAR(45),
-	yayin_evi VARCHAR(45),
+	kitap_adi VARCHAR(25),
+	yayin_evi VARCHAR(25),
 	kitap_kategori_no INT,
 	PRIMARY KEY (isbn_no)
 );
 
 CREATE TABLE IF NOT EXISTS kutuphanedb.yazarlar (
 	yazar_no INT NOT NULL AUTO_INCREMENT,
-	yazar_adi VARCHAR(45),
-	yazar_soyadi VARCHAR(45),
+	yazar_adi VARCHAR(20),
+	yazar_soyadi VARCHAR(20),
 	PRIMARY KEY (yazar_no)
 );
 
 CREATE TABLE IF NOT EXISTS kutuphanedb.kategoriler (
 	kategori_no INT NOT NULL AUTO_INCREMENT,
-	kategori_ismi VARCHAR(45),
+	kategori_ismi VARCHAR(15),
 	PRIMARY KEY (kategori_no)
 );
 
