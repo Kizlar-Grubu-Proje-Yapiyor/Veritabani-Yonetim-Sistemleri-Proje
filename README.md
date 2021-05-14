@@ -17,9 +17,10 @@ Kurulum için iki seçenek vardır: Tam kurulum ve kısmi kurulum. Tam kurulumda
 
 Tam kurulum esnasında sisteminizde yapılacak değişiklikler:
 
-* `firewalld`, `apache2`, `mysql-server`, `mysql-client`, `php`, `phpmyadmin`, `libapache2-mod-php`, `php-mysql` paketleri yüklenecektir.
+* `apache2`, `mysql-server`, `php`, `libapache2-mod-php`, `php-mysql`, `firewalld`, `mysql-client`, `phpmyadmin` paketleri yüklenecektir.
 * Sisteminiz güncellenecektir.
 * Sisteminiz bir sunucu olacaktır.
+* `MySQL` varsayılan ayarlarıyla kurulacaktır.
 
 Eğer sisteminiz yukarıdaki koşulları sağlıyorsa kısmi kurulum yapabilirsiniz.  
 
