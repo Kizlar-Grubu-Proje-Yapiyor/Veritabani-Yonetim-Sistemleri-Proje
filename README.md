@@ -1,6 +1,6 @@
 # Veritabani Yonetim Sistemleri Proje Ödevi
 
-Bu proje `BLM0224 Veritabanı Yönetim Sistemleri` dersi için hazırlanmıştır. Proje özetle: `php`, `HTML`, `CSS`, `JavaScript` ve `mySQL` kullanılarak yapılmış bir kütüphane-otomasyonu sitesi olarak tanımlanabilir.
+Bu proje `BLM0224 Veritabanı Yönetim Sistemleri` dersi için hazırlanmıştır. Proje özetle: `Ubuntu 20.04  LTS` üzerinde `Apache web sunucusu` ile çalışan; `PHP`, `HTML`, `CSS`, `JavaScript` ve `MySQL` kullanılarak yapılmış bir kütüphane-otomasyonu sitesi olarak tanımlanabilir.
 
 ## Proje Grubu
 
@@ -12,22 +12,18 @@ Bu proje `BLM0224 Veritabanı Yönetim Sistemleri` dersi için hazırlanmıştı
 
 ## Kurulum
 
-Gereksinimler:
-
-* Ubuntu 20.04
-* İnternet (Gerekli paketlerin kurulması için)
-
 **Dikkat!**  
-Sisteminize bazı değişiklikler yapılacaktır. Bu değişiklikler:
+Kurulum için iki seçenek vardır: Tam kurulum ve kısmi kurulum. Tam kurulumda projenin çalışması için gerekli her şey yüklenir ve sisteminizde birkaç ayar değiştirilir. Kısmi kurulumda ise hiçbir gerekli paket yüklenmez, gerekli ayarlar yapılmaz. İki kurulum yönteminde de `mysql` için kullanıcı, database, tablolar vb. ayarları yapılır, web sitesinin dosyaları sunucu içinde olması gereken yere taşınır. Eğer sisteminiz için `Apache web sunucusu`, `mySQL` ve `php` yüklenip ayarlanmamışsa tam kurulum tavsiye edilir.  
+
+Tam kurulum esnasında sisteminizde yapılacak değişiklikler:
 
 * `firewalld`, `apache2`, `mysql-server`, `mysql-client`, `php`, `phpmyadmin`, `libapache2-mod-php`, `php-mysql` paketleri yüklenecektir.
 * Sisteminiz güncellenecektir.
-* `mysql` ayarlarınız değiştirilip, yeni kullanıcı eklenecektir.
 * Sisteminiz bir sunucu olacaktır.
 
-Eğer bilgisayarınızda bu değişikliklerin gerçekleşmesini istemiyorsanız sanal makine kullanabilirsiniz. Eğer bu seçeneklerden hiçbiri sizi memnum etmiyorsa kurulumu gerçekleştirmeyiniz.  
+Eğer sisteminiz yukarıdaki koşulları sağlıyorsa kısmi kurulum yapabilirsiniz.  
 
-[yukle.sh](yukle.sh) adlı kurulum dosyası bütün işlemleri otomatize etmeye çalışsa da, `mysql` için `root` şifresi oluşturmanızı isteyecektir. Buraya gireceğiniz şifre programın çalışmasını etkilemeyecektir.  
+**Hangi kurulum seçeneğini seçmek istediğiniz kurulum esnasında sorulacaktır.**  
 
 Kurulum:
 
