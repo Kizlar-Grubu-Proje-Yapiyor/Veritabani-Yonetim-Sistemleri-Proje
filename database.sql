@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS kutuphanedb.uyeler (
 );
 
 CREATE TABLE IF NOT EXISTS kutuphanedb.kitaplar (
-	isbn_no INT,
+	isbn_no VARCHAR(13),
 	kitap_adi VARCHAR(25),
 	yayin_evi VARCHAR(25),
 	kitap_kategori_no INT,
@@ -51,7 +51,7 @@ CREATE TABLE IF NOT EXISTS kutuphanedb.emanet (
 	emanet_no INT NOT NULL AUTO_INCREMENT,
 	kutuphane_no INT,
 	uye_no INT,
-	isbn_no INT,
+	isbn_no VARCHAR(13),
 	alim_tarihi DATETIME,
 	teslim_tarihi DATETIME,
 	PRIMARY KEY (emanet_no),
@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS kutuphanedb.emanet (
 
 CREATE TABLE IF NOT EXISTS kutuphanedb.kitap_kategori (
 	kitap_kategori_no INT NOT NULL AUTO_INCREMENT,
-	isbn_no INT,
+	isbn_no VARCHAR(13),
 	kategori_no INT,
 	PRIMARY KEY (kitap_kategori_no),
 	FOREIGN KEY (isbn_no) REFERENCES kutuphanedb.kitaplar(isbn_no),
@@ -71,7 +71,7 @@ CREATE TABLE IF NOT EXISTS kutuphanedb.kitap_kategori (
 
 CREATE TABLE IF NOT EXISTS kutuphanedb.kitap_yazar (
 	kitap_yazar_no INT NOT NULL AUTO_INCREMENT,
-	isbn_no INT,
+	isbn_no VARCHAR(13),
 	yazar_no INT,
 	PRIMARY KEY (kitap_yazar_no),
 	FOREIGN KEY (isbn_no) REFERENCES kutuphanedb.kitaplar(isbn_no),
@@ -81,7 +81,7 @@ CREATE TABLE IF NOT EXISTS kutuphanedb.kitap_yazar (
 CREATE TABLE IF NOT EXISTS kutuphanedb.kutuphane_kitap (
 	kutuphane_kitap_no INT NOT NULL AUTO_INCREMENT,
 	kutuphane_no INT,
-	isbn_no INT,
+	isbn_no VARCHAR(13),
 	PRIMARY KEY (kutuphane_kitap_no),
 	FOREIGN KEY (kutuphane_no) REFERENCES kutuphanedb.kutuphane(kutuphane_no),
 	FOREIGN KEY (isbn_no) REFERENCES kutuphanedb.kitaplar(isbn_no)
