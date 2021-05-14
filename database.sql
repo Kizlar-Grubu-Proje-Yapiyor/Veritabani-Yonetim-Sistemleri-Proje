@@ -29,6 +29,7 @@ CREATE TABLE IF NOT EXISTS kutuphanedb.uyeler (
 	uye_soyadi VARCHAR(20),
 	uye_tel_no VARCHAR(13),
 	uye_eposta VARCHAR(50),
+	uye_sifre VARCHAR(20),
 	adres_no INT,
 	PRIMARY KEY (uye_no),
 	FOREIGN KEY (adres_no) REFERENCES kutuphanedb.adresler(adres_no)
@@ -112,10 +113,10 @@ INSERT INTO kutuphanedb.kutuphane (kutuphane_adi, adres_no) VALUES ("Şehbenderl
 
 -- Uyeler
 INSERT INTO kutuphanedb.adresler (adres) VALUES ("Bir Mah. Birbir Cad. Osmangazi/Bursa");
-INSERT INTO kutuphanedb.uyeler (uye_adi, uye_soyadi, uye_tel_no, uye_eposta, adres_no) VALUES ("Ahmet", "Demir", "+905058559624", "ahmetdemir@email.com", LAST_INSERT_ID());
+INSERT INTO kutuphanedb.uyeler (uye_adi, uye_soyadi, uye_tel_no, uye_eposta, uye_sifre, adres_no) VALUES ("Ahmet", "Demir", "+905058559624", "ahmetdemir@email.com", "cokzorsifre", LAST_INSERT_ID());
 
 INSERT INTO kutuphanedb.adresler (adres) VALUES ("İki Mah. İkiiki Cad. Yıldırım/Bursa");
-INSERT INTO kutuphanedb.uyeler (uye_adi, uye_soyadi, uye_tel_no, uye_eposta, adres_no) VALUES ("Mehmet", "Gümüş", "+905557889452", "mehmetgumus@email.com", LAST_INSERT_ID());
+INSERT INTO kutuphanedb.uyeler (uye_adi, uye_soyadi, uye_tel_no, uye_eposta, uye_sifre, adres_no) VALUES ("Mehmet", "Gümüş", "+905557889452", "mehmetgumus@email.com", "fantailekola", LAST_INSERT_ID());
 
 -- Kitaplar
 INSERT INTO kutuphanedb.kitaplar (isbn_no, kitap_adi, yayin_evi, kitap_kategori_no) VALUES ("978-975-08-0001-X", "Kuyucaklı Yusuf", "Yapı Kredi Yayınları", 1);
