@@ -17,14 +17,24 @@ then
 	exit
 fi
 
+echo -e "\n${BOLD_BLUE}Sisteminiz guncelleniyor${NC}\n"
 apt update
+apt upgrade -y
+
+echo -e "\n${BOLD_BLUE}${NC}\n"
 apt install -y firewalld apache2 mysql-server mysql-client php phpmyadmin libapache2-mod-php php-mysql
 
+echo -e "\n${BOLD_BLUE}Apache web sunucusu etkinlestiriliyor${NC}\n"
 ufw app list
 ufw allow in "Apache"
 ufw enable
 ufw status
 
+echo -e "\n${BOLD_BLUE}mySQL kurulumu yapiliyor${NC}"
+echo -e "${BOLD_RED}Sizden root kullanicisi icin sifre sorabilir! Sectiginiz sifrenin bir onemi yoktur.${NC}"
 mysql_secure_installation --use-default
 
+echo -e "\n${BOLD_BLUE}Database ayarlaniyor${NC}\n"
 mysql < database.sql
+
+echo -e "\n${BOLD_GREEN}Kurulum tamamlandi!${NC}\n"
