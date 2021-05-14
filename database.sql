@@ -86,3 +86,7 @@ CREATE TABLE IF NOT EXISTS kutuphanedb.kutuphane_kitap (
 	FOREIGN KEY (kutuphane_no) REFERENCES kutuphanedb.kutuphane(kutuphane_no),
 	FOREIGN KEY (isbn_no) REFERENCES kutuphanedb.kitaplar(isbn_no)
 );
+
+DROP USER IF EXISTS kgpy;
+CREATE USER 'kgpy'@'%' IDENTIFIED WITH mysql_native_password BY 'sifreli.Patates97';
+GRANT ALL ON kutuphanedb.* TO 'kgpy'@'%';

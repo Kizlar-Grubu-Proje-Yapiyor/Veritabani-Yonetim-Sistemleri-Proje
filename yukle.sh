@@ -25,4 +25,6 @@ ufw allow in "Apache"
 ufw enable
 ufw status
 
-mysql_secure_installation
+mysql_secure_installation --use-default
+
+mysql < database.sql
