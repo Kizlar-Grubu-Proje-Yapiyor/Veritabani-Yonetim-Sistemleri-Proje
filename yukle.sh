@@ -50,5 +50,6 @@ fi
 
 echo -e "${BOLD_BLUE}Database ayarlaniyor${NC}"
 mysql < database.sql
+mysql < ontanimli_degerler.sql
 
 echo -e "${BOLD_GREEN}Kurulum tamamlandi!${NC}"
