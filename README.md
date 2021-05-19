@@ -13,12 +13,12 @@ Bu proje `BLM0224 Veritabanı Yönetim Sistemleri` dersi için hazırlanmıştı
 ## Kurulum
 
 **Dikkat!**  
-Kurulum için iki seçenek vardır: Tam kurulum ve kısmi kurulum. Tam kurulumda projenin çalışması için gerekli her şey yüklenir ve sisteminizde birkaç ayar değiştirilir. Kısmi kurulumda ise hiçbir gerekli paket yüklenmez, gerekli ayarlar yapılmaz. İki kurulum yönteminde de `mysql` için kullanıcı, database, tablolar vb. ayarları yapılır, web sitesinin dosyaları sunucu içinde olması gereken yere taşınır. Eğer sisteminiz için `Apache web sunucusu`, `mySQL` ve `php` yüklenip ayarlanmamışsa tam kurulum tavsiye edilir.  
+Kurulum için iki seçenek vardır: Tam kurulum ve kısmi kurulum. Tam kurulumda projenin çalışması için gerekli her şey yüklenir ve sisteminizde birkaç ayar değiştirilir. Kısmi kurulumda ise hiçbir gerekli paket yüklenmez, gerekli ayarlar yapılmaz. İki kurulum yönteminde de `MySQL` için kullanıcı, database ve tablolar ayarlarlanıp, web sitesinin dosyaları sunucu içinde olması gereken yere taşınacaktır. Eğer sisteminiz için `Apache web sunucusu`, `MySQL` ve `PHP` yüklenip, ayarlanmamışsa tam kurulum tavsiye edilir.  
 
 Tam kurulum esnasında sisteminizde yapılacak değişiklikler:
 
-* `apache2`, `mysql-server`, `php`, `libapache2-mod-php`, `php-mysql`, `firewalld`, `mysql-client`, `phpmyadmin` paketleri yüklenecektir.
-* `Apache Web Sunucusu` kurulacaktır.
+* Gerekli paketler yüklenecektir.
+* `Apache Web Sunucusu` için gerekli ayarlar yapılacaktır.
 * `MySQL` varsayılan ayarlarıyla kurulacaktır.
 
 Eğer sisteminiz yukarıdaki koşulları sağlıyorsa kısmi kurulum yapabilirsiniz.  
