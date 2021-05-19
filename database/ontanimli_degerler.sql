@@ -50,6 +50,18 @@ UPDATE kutuphanedb.emanet SET teslim_tarihi = "2021-05-14" WHERE uye_no = (SELEC
 -- Kitap - kategori
 INSERT INTO kutuphanedb.kitap_kategori (isbn_no, kategori_no) VALUES ("978-975-08-0001-X", (SELECT kategori_no FROM kategoriler WHERE kategori_ismi = "Türk ve Dünya Klasikleri"));
 INSERT INTO kutuphanedb.kitap_kategori (isbn_no, kategori_no) VALUES ("978-975-363-802-7", (SELECT kategori_no FROM kategoriler WHERE kategori_ismi = "Türk ve Dünya Klasikleri"));
+INSERT INTO kutuphanedb.kitap_kategori (isbn_no, kategori_no) VALUES ("878-955-373-802-2", 1);
+INSERT INTO kutuphanedb.kitap_kategori (isbn_no, kategori_no) VALUES ("178-978-363-882-9", 2);
+INSERT INTO kutuphanedb.kitap_kategori (isbn_no, kategori_no) VALUES ("278-175-368-802-4", 3);
+INSERT INTO kutuphanedb.kitap_kategori (isbn_no, kategori_no) VALUES ("978-975-363-808-5", 3);
+INSERT INTO kutuphanedb.kitap_kategori (isbn_no, kategori_no) VALUES ("978-975-363-808-5", 1);
+INSERT INTO kutuphanedb.kitap_kategori (isbn_no, kategori_no) VALUES ("278-675-383-822-2", 3);
+INSERT INTO kutuphanedb.kitap_kategori (isbn_no, kategori_no) VALUES ("478-673-363-872-1", 2);
+INSERT INTO kutuphanedb.kitap_kategori (isbn_no, kategori_no) VALUES ("878-655-353-722-5", 3);
+INSERT INTO kutuphanedb.kitap_kategori (isbn_no, kategori_no) VALUES ("878-655-353-722-5", 2);
+INSERT INTO kutuphanedb.kitap_kategori (isbn_no, kategori_no) VALUES ("778-685-343-872-3", 2);
+INSERT INTO kutuphanedb.kitap_kategori (isbn_no, kategori_no) VALUES ("277-676-384-822-4", 1);
+INSERT INTO kutuphanedb.kitap_kategori (isbn_no, kategori_no) VALUES ("207-606-389-888-5", 3);
 
 -- Kitap - yazar
 INSERT INTO kutuphanedb.kitap_yazar (isbn_no, yazar_no) VALUES ("978-975-08-0001-X", (SELECT yazar_no FROM yazarlar WHERE yazar_adi = "Sabahattin" AND yazar_soyadi = "Ali"));
