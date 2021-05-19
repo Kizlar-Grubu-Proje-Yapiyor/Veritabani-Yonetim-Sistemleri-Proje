@@ -18,17 +18,17 @@ INSERT INTO kutuphanedb.adresler (adres) VALUES ("İki Mah. İkiiki Cad. Yıldı
 INSERT INTO kutuphanedb.uyeler (uye_adi, uye_soyadi, uye_tel_no, uye_eposta, uye_sifre, adres_no) VALUES ("Mehmet", "Gümüş", "+905557889452", "mehmetgumus@email.com", "fantailekola", LAST_INSERT_ID());
 
 -- Kitaplar
-INSERT INTO kutuphanedb.kitaplar (isbn_no, kitap_adi, yayin_evi, kitap_kategori_no) VALUES ("978-975-08-0001-X", "Kuyucaklı Yusuf", "Yapı Kredi Yayınları", 1);
-INSERT INTO kutuphanedb.kitaplar (isbn_no, kitap_adi, yayin_evi, kitap_kategori_no) VALUES ("978-975-363-802-7", "Kürk Mantolu Madonna", "Yapı Kredi Yayınları", 1);
-INSERT INTO kutuphanedb.kitaplar (isbn_no, kitap_adi, yayin_evi, kitap_kategori_no) VALUES ("878-955-373-802-2", "Deneme Kitap 1", "Bir Yayınları", 1);
-INSERT INTO kutuphanedb.kitaplar (isbn_no, kitap_adi, yayin_evi, kitap_kategori_no) VALUES ("178-978-363-882-9", "Deneme Kitap 2", "İki Yayınları", 3);
-INSERT INTO kutuphanedb.kitaplar (isbn_no, kitap_adi, yayin_evi, kitap_kategori_no) VALUES ("278-175-368-802-4", "Deneme Kitap 3", "Bir Yayınları", 2);
-INSERT INTO kutuphanedb.kitaplar (isbn_no, kitap_adi, yayin_evi, kitap_kategori_no) VALUES ("978-975-363-808-5", "Deneme Kitap 4", "Üç Yayınları", 2);
-INSERT INTO kutuphanedb.kitaplar (isbn_no, kitap_adi, yayin_evi, kitap_kategori_no) VALUES ("278-675-383-822-2", "Deneme Kitap 5", "Dört Yayınları", 1);
-INSERT INTO kutuphanedb.kitaplar (isbn_no, kitap_adi, yayin_evi, kitap_kategori_no) VALUES ("478-673-363-872-1", "Deneme Kitap 6", "Dört Yayınları", 3);
-INSERT INTO kutuphanedb.kitaplar (isbn_no, kitap_adi, yayin_evi, kitap_kategori_no) VALUES ("878-655-353-722-5", "Deneme Kitap 7", "Dört Yayınları", 2);
-INSERT INTO kutuphanedb.kitaplar (isbn_no, kitap_adi, yayin_evi, kitap_kategori_no) VALUES ("778-685-343-872-3", "Deneme Kitap 8", "Dört Yayınları", 1);
-INSERT INTO kutuphanedb.kitaplar (isbn_no, kitap_adi, yayin_evi, kitap_kategori_no) VALUES ("277-676-384-822-4", "Deneme Kitap 9", "Dört Yayınları", 3);
+INSERT INTO kutuphanedb.kitaplar (isbn_no, kitap_adi, yayin_evi) VALUES ("978-975-08-0001-X", "Kuyucaklı Yusuf", "Yapı Kredi Yayınları");
+INSERT INTO kutuphanedb.kitaplar (isbn_no, kitap_adi, yayin_evi) VALUES ("978-975-363-802-7", "Kürk Mantolu Madonna", "Yapı Kredi Yayınları");
+INSERT INTO kutuphanedb.kitaplar (isbn_no, kitap_adi, yayin_evi) VALUES ("878-955-373-802-2", "Deneme Kitap 1", "Bir Yayınları");
+INSERT INTO kutuphanedb.kitaplar (isbn_no, kitap_adi, yayin_evi) VALUES ("178-978-363-882-9", "Deneme Kitap 2", "İki Yayınları");
+INSERT INTO kutuphanedb.kitaplar (isbn_no, kitap_adi, yayin_evi) VALUES ("278-175-368-802-4", "Deneme Kitap 3", "Bir Yayınları");
+INSERT INTO kutuphanedb.kitaplar (isbn_no, kitap_adi, yayin_evi) VALUES ("978-975-363-808-5", "Deneme Kitap 4", "Üç Yayınları");
+INSERT INTO kutuphanedb.kitaplar (isbn_no, kitap_adi, yayin_evi) VALUES ("278-675-383-822-2", "Deneme Kitap 5", "Dört Yayınları");
+INSERT INTO kutuphanedb.kitaplar (isbn_no, kitap_adi, yayin_evi) VALUES ("478-673-363-872-1", "Deneme Kitap 6", "Dört Yayınları");
+INSERT INTO kutuphanedb.kitaplar (isbn_no, kitap_adi, yayin_evi) VALUES ("878-655-353-722-5", "Deneme Kitap 7", "Dört Yayınları");
+INSERT INTO kutuphanedb.kitaplar (isbn_no, kitap_adi, yayin_evi) VALUES ("778-685-343-872-3", "Deneme Kitap 8", "Dört Yayınları");
+INSERT INTO kutuphanedb.kitaplar (isbn_no, kitap_adi, yayin_evi) VALUES ("277-676-384-822-4", "Deneme Kitap 9", "Dört Yayınları");
 
 
 -- Yazarlar

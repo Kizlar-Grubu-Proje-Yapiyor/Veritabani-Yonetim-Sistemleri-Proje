@@ -39,7 +39,6 @@ CREATE TABLE IF NOT EXISTS kutuphanedb.kitaplar (
 	isbn_no VARCHAR(17),
 	kitap_adi VARCHAR(25),
 	yayin_evi VARCHAR(25),
-	kitap_kategori_no INT,
 	PRIMARY KEY (isbn_no)
 );
 
