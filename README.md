@@ -35,4 +35,5 @@ sudo ./yukle.sh
 ```
 
 ## Lisans
+
 [MIT License](LICENSE)
