@@ -20,12 +20,28 @@ INSERT INTO kutuphanedb.uyeler (uye_adi, uye_soyadi, uye_tel_no, uye_eposta, uye
 -- Kitaplar
 INSERT INTO kutuphanedb.kitaplar (isbn_no, kitap_adi, yayin_evi, kitap_kategori_no) VALUES ("978-975-08-0001-X", "Kuyucaklı Yusuf", "Yapı Kredi Yayınları", 1);
 INSERT INTO kutuphanedb.kitaplar (isbn_no, kitap_adi, yayin_evi, kitap_kategori_no) VALUES ("978-975-363-802-7", "Kürk Mantolu Madonna", "Yapı Kredi Yayınları", 1);
+INSERT INTO kutuphanedb.kitaplar (isbn_no, kitap_adi, yayin_evi, kitap_kategori_no) VALUES ("878-955-373-802-2", "Deneme Kitap 1", "Bir Yayınları", 1);
+INSERT INTO kutuphanedb.kitaplar (isbn_no, kitap_adi, yayin_evi, kitap_kategori_no) VALUES ("178-978-363-882-9", "Deneme Kitap 2", "İki Yayınları", 3);
+INSERT INTO kutuphanedb.kitaplar (isbn_no, kitap_adi, yayin_evi, kitap_kategori_no) VALUES ("278-175-368-802-4", "Deneme Kitap 3", "Bir Yayınları", 2);
+INSERT INTO kutuphanedb.kitaplar (isbn_no, kitap_adi, yayin_evi, kitap_kategori_no) VALUES ("978-975-363-808-5", "Deneme Kitap 4", "Üç Yayınları", 2);
+INSERT INTO kutuphanedb.kitaplar (isbn_no, kitap_adi, yayin_evi, kitap_kategori_no) VALUES ("278-675-383-822-2", "Deneme Kitap 5", "Dört Yayınları", 1);
+INSERT INTO kutuphanedb.kitaplar (isbn_no, kitap_adi, yayin_evi, kitap_kategori_no) VALUES ("478-673-363-872-1", "Deneme Kitap 6", "Dört Yayınları", 3);
+INSERT INTO kutuphanedb.kitaplar (isbn_no, kitap_adi, yayin_evi, kitap_kategori_no) VALUES ("878-655-353-722-5", "Deneme Kitap 7", "Dört Yayınları", 2);
+INSERT INTO kutuphanedb.kitaplar (isbn_no, kitap_adi, yayin_evi, kitap_kategori_no) VALUES ("778-685-343-872-3", "Deneme Kitap 8", "Dört Yayınları", 1);
+INSERT INTO kutuphanedb.kitaplar (isbn_no, kitap_adi, yayin_evi, kitap_kategori_no) VALUES ("277-676-384-822-4", "Deneme Kitap 9", "Dört Yayınları", 3);
+
 
 -- Yazarlar
 INSERT INTO kutuphanedb.yazarlar (yazar_adi, yazar_soyadi) VALUES ("Sabahattin", "Ali");
+INSERT INTO kutuphanedb.yazarlar (yazar_adi, yazar_soyadi) VALUES ("Yazar", "Bir");
+INSERT INTO kutuphanedb.yazarlar (yazar_adi, yazar_soyadi) VALUES ("Yazar", "İki");
+INSERT INTO kutuphanedb.yazarlar (yazar_adi, yazar_soyadi) VALUES ("Yazar", "Üç");
 
 -- Kategoriler
 INSERT INTO kutuphanedb.kategoriler (kategori_ismi) VALUES ("Türk ve Dünya Klasikleri");
+INSERT INTO kutuphanedb.kategoriler (kategori_ismi) VALUES ("Bilim Kurgu");
+INSERT INTO kutuphanedb.kategoriler (kategori_ismi) VALUES ("Eğitim");
+
 
 -- Emanet
 INSERT INTO kutuphanedb.emanet (kutuphane_no, uye_no, isbn_no, alim_tarihi) VALUES ((SELECT kutuphane_no FROM kutuphane WHERE kutuphane_adi = "Şehir Kütüphanesi"), (SELECT uye_no FROM uyeler WHERE uye_adi = "Mehmet" AND uye_soyadi = "Gümüş"), "978-975-363-802-7", "2021-05-13");
@@ -43,3 +59,12 @@ INSERT INTO kutuphanedb.kitap_yazar (isbn_no, yazar_no) VALUES ("978-975-363-802
 INSERT INTO kutuphanedb.kutuphane_kitap (kutuphane_no, isbn_no, adet) VALUES ((SELECT kutuphane_no FROM kutuphane WHERE kutuphane_adi = "Şehir Kütüphanesi"), "978-975-08-0001-X", 10);
 INSERT INTO kutuphanedb.kutuphane_kitap (kutuphane_no, isbn_no, adet) VALUES ((SELECT kutuphane_no FROM kutuphane WHERE kutuphane_adi = "Şehir Kütüphanesi"), "978-975-363-802-7", 2);
 INSERT INTO kutuphanedb.kutuphane_kitap (kutuphane_no, isbn_no, adet) VALUES ((SELECT kutuphane_no FROM kutuphane WHERE kutuphane_adi = "Mimar Sinan Sosyal Yaşam Merkezi Kütüphanesi"), "978-975-08-0001-X", 30);
+INSERT INTO kutuphanedb.kutuphane_kitap (kutuphane_no, isbn_no, adet) VALUES ((SELECT kutuphane_no FROM kutuphane WHERE kutuphane_adi = "Şehir Kütüphanesi"), "878-955-373-802-2", 21);
+INSERT INTO kutuphanedb.kutuphane_kitap (kutuphane_no, isbn_no, adet) VALUES ((SELECT kutuphane_no FROM kutuphane WHERE kutuphane_adi = "Mimar Sinan Sosyal Yaşam Merkezi Kütüphanesi"), "178-978-363-882-9", 5);
+INSERT INTO kutuphanedb.kutuphane_kitap (kutuphane_no, isbn_no, adet) VALUES ((SELECT kutuphane_no FROM kutuphane WHERE kutuphane_adi = "Şehbenderler Konağı Kütüphanesi"), "278-175-368-802-4", 56);
+INSERT INTO kutuphanedb.kutuphane_kitap (kutuphane_no, isbn_no, adet) VALUES ((SELECT kutuphane_no FROM kutuphane WHERE kutuphane_adi = "Mimar Sinan Sosyal Yaşam Merkezi Kütüphanesi"), "978-975-363-808-5", 4);
+INSERT INTO kutuphanedb.kutuphane_kitap (kutuphane_no, isbn_no, adet) VALUES ((SELECT kutuphane_no FROM kutuphane WHERE kutuphane_adi = "Şehbenderler Konağı Kütüphanesi"), "278-675-383-822-2", 1);
+INSERT INTO kutuphanedb.kutuphane_kitap (kutuphane_no, isbn_no, adet) VALUES ((SELECT kutuphane_no FROM kutuphane WHERE kutuphane_adi = "Şehir Kütüphanesi"), "478-673-363-872-1", 8);
+INSERT INTO kutuphanedb.kutuphane_kitap (kutuphane_no, isbn_no, adet) VALUES ((SELECT kutuphane_no FROM kutuphane WHERE kutuphane_adi = "Mimar Sinan Sosyal Yaşam Merkezi Kütüphanesi"), "878-655-353-722-5", 155);
+INSERT INTO kutuphanedb.kutuphane_kitap (kutuphane_no, isbn_no, adet) VALUES ((SELECT kutuphane_no FROM kutuphane WHERE kutuphane_adi = "Şehbenderler Konağı Kütüphanesi"), "778-685-343-872-3", 2);
+INSERT INTO kutuphanedb.kutuphane_kitap (kutuphane_no, isbn_no, adet) VALUES ((SELECT kutuphane_no FROM kutuphane WHERE kutuphane_adi = "Şehir Kütüphanesi"), "277-676-384-822-4", 89);
