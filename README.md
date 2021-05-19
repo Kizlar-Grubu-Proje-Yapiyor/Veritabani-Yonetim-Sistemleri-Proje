@@ -1,6 +1,6 @@
 # Veritabani Yonetim Sistemleri Proje Ödevi
 
-Bu proje `BLM0224 Veritabanı Yönetim Sistemleri` dersi için hazırlanmıştır. Proje özetle: `Ubuntu 20.04  LTS` üzerinde `Apache web sunucusu` ile çalışan; `PHP`, `HTML`, `CSS`, `JavaScript` ve `MySQL` kullanılarak yapılmış bir kütüphane-otomasyonu sitesi olarak tanımlanabilir.
+Bu proje `BLM0224 Veritabanı Yönetim Sistemleri` dersi için hazırlanmıştır. Proje özetle: `Ubuntu 20.04  LTS` üzerinde `Apache Web Sunucusu` ile çalışan; `PHP`, `HTML`, `CSS`, `JavaScript` ve `MySQL` kullanılarak yapılmış bir kütüphane-otomasyonu sitesi olarak tanımlanabilir.
 
 ## Proje Grubu
 
@@ -18,8 +18,7 @@ Kurulum için iki seçenek vardır: Tam kurulum ve kısmi kurulum. Tam kurulumda
 Tam kurulum esnasında sisteminizde yapılacak değişiklikler:
 
 * `apache2`, `mysql-server`, `php`, `libapache2-mod-php`, `php-mysql`, `firewalld`, `mysql-client`, `phpmyadmin` paketleri yüklenecektir.
-* Sisteminiz güncellenecektir.
-* Sisteminiz bir sunucu olacaktır.
+* `Apache Web Sunucusu` kurulacaktır.
 * `MySQL` varsayılan ayarlarıyla kurulacaktır.
 
 Eğer sisteminiz yukarıdaki koşulları sağlıyorsa kısmi kurulum yapabilirsiniz.  
@@ -34,10 +33,6 @@ git clone https://github.com/Kizlar-Grubu-Proje-Yapiyor/Veritabani-Yonetim-Siste
 cd Veritabani-Yonetim-Sistemleri-Projesi/
 sudo ./yukle.sh
 ```
-
-## Kaynaklar
-
-* https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-20-04
 
 ## Lisans
 [MIT License](LICENSE)

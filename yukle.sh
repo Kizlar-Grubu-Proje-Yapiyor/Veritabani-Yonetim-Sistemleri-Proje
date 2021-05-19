@@ -28,9 +28,8 @@ if [[ $ans == "1" || $ans == "T" || $ans == "t" ]]
 then
 	echo -e "${BOLD_BLUE}Tam kurulum secildi${NC}"
 
-	echo -e "${BOLD_BLUE}Sisteminiz guncelleniyor${NC}"
+	echo -e "${BOLD_BLUE}Sistem kaynaklari guncelleniyor${NC}"
 	apt update
-	apt upgrade -y
 
 	echo -e "${BOLD_BLUE}Gerekli paketler yukleniyor${NC}"
 	apt install -y firewalld apache2 mysql-server mysql-client php phpmyadmin libapache2-mod-php php-mysql
@@ -41,7 +40,7 @@ then
 	ufw enable
 	ufw status
 
-	echo -e "${BOLD_BLUE}mySQL kurulumu yapiliyor${NC}"
+	echo -e "${BOLD_BLUE}MySQL kurulumu yapiliyor${NC}"
 	echo -e "${BOLD_RED}Sizden root kullanicisi icin sifre sorabilir! Sectiginiz sifrenin bir onemi yoktur.${NC}"
 	mysql_secure_installation --use-default
 else
