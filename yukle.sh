@@ -47,8 +47,9 @@ else
 	echo -e "${BOLD_BLUE}Kismi kurulum secildi${NC}"
 fi
 
-echo -e "${BOLD_BLUE}Database ayarlaniyor${NC}"
-mysql < database.sql
-mysql < ontanimli_degerler.sql
+echo -e "${BOLD_BLUE}Database icin tablolar olusturuluyor${NC}"
+mysql < database/database.sql
+echo -e "${BOLD_BLUE}Database'e ornek veriler ekleniyor${NC}"
+mysql < database/ontanimli_degerler.sql
 
 echo -e "${BOLD_GREEN}Kurulum tamamlandi!${NC}"
