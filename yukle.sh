@@ -32,13 +32,13 @@ then
 	apt update
 
 	echo -e "${BOLD_BLUE}Gerekli paketler yukleniyor${NC}"
-	apt install -y firewalld apache2 mysql-server mysql-client php phpmyadmin libapache2-mod-php php-mysql
+	apt install -y apache2 mysql-server php libapache2-mod-php php-mysql
 
 	echo -e "${BOLD_BLUE}Apache web sunucusu etkinlestiriliyor${NC}"
-	ufw app list
+	#ufw app list
 	ufw allow in "Apache"
 	ufw enable
-	ufw status
+	#ufw status
 
 	echo -e "${BOLD_BLUE}MySQL kurulumu yapiliyor${NC}"
 	echo -e "${BOLD_RED}Sizden root kullanicisi icin sifre sorabilir! Sectiginiz sifrenin bir onemi yoktur.${NC}"
