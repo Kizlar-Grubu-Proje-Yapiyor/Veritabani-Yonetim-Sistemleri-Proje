@@ -35,10 +35,8 @@ then
 	apt install -y apache2 mysql-server php libapache2-mod-php php-mysql
 
 	echo -e "${BOLD_BLUE}Apache web sunucusu etkinlestiriliyor${NC}"
-	#ufw app list
 	ufw allow in "Apache"
 	ufw enable
-	#ufw status
 
 	echo -e "${BOLD_BLUE}MySQL kurulumu yapiliyor${NC}"
 	echo -e "${BOLD_RED}Sizden root kullanicisi icin sifre sorabilir! Sectiginiz sifrenin bir onemi yoktur.${NC}"
@@ -51,5 +49,8 @@ echo -e "${BOLD_BLUE}Database icin tablolar olusturuluyor${NC}"
 mysql < database/database.sql
 echo -e "${BOLD_BLUE}Database'e ornek veriler ekleniyor${NC}"
 mysql < database/ontanimli_degerler.sql
+
+#echo -e "${BOLD_BLUE}Web sitesi ayarlaniyor${NC}"
+#cp -r site/* /var/www/html/
 
 echo -e "${BOLD_GREEN}Kurulum tamamlandi!${NC}"
