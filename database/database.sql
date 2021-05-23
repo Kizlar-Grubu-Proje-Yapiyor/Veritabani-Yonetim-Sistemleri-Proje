@@ -25,8 +25,8 @@ CREATE TABLE IF NOT EXISTS kutuphanedb.kutuphane (
 
 CREATE TABLE IF NOT EXISTS kutuphanedb.uyeler (
 	uye_no INT NOT NULL AUTO_INCREMENT,
-	uye_adi VARCHAR(20),
-	uye_soyadi VARCHAR(20),
+	uye_adi VARCHAR(25),
+	uye_soyadi VARCHAR(25),
 	uye_tel_no VARCHAR(13),
 	uye_eposta VARCHAR(50),
 	uye_sifre VARCHAR(20),
@@ -37,15 +37,15 @@ CREATE TABLE IF NOT EXISTS kutuphanedb.uyeler (
 
 CREATE TABLE IF NOT EXISTS kutuphanedb.kitaplar (
 	isbn_no VARCHAR(17),
-	kitap_adi VARCHAR(25),
-	yayin_evi VARCHAR(25),
+	kitap_adi VARCHAR(40),
+	yayin_evi VARCHAR(40),
 	PRIMARY KEY (isbn_no)
 );
 
 CREATE TABLE IF NOT EXISTS kutuphanedb.yazarlar (
 	yazar_no INT NOT NULL AUTO_INCREMENT,
-	yazar_adi VARCHAR(20),
-	yazar_soyadi VARCHAR(20),
+	yazar_adi VARCHAR(25),
+	yazar_soyadi VARCHAR(25),
 	PRIMARY KEY (yazar_no)
 );
 
