@@ -50,7 +50,8 @@ mysql < database/database.sql
 echo -e "${BOLD_BLUE}Database'e ornek veriler ekleniyor${NC}"
 mysql < database/ontanimli_degerler.sql
 
-#echo -e "${BOLD_BLUE}Web sitesi ayarlaniyor${NC}"
-#cp -r site/* /var/www/html/
+echo -e "${BOLD_BLUE}Web sitesi ayarlaniyor${NC}"
+cp -r site/* /var/www/html/
+rm /var/www/html/index.html
 
 echo -e "${BOLD_GREEN}Kurulum tamamlandi!${NC}"
